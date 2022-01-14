@@ -17,9 +17,7 @@ const Navbar = () => {
     <>
       <div>
         <ul className="nav-root-container">
-          <li
-            style={{ marginTop: "1rem", fontSize: "1.2rem", fontWeight: "600" }}
-          >
+          <li className="nav-heading">
             <GiMusicalNotes /> Musicverse
           </li>
           <li style={{ width: "40%" }}>
