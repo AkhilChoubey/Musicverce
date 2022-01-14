@@ -10,6 +10,12 @@
   color: white;
 }
 
+.nav-heading {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .nav-search-input {
   background-color: #313131;
   color: white;
