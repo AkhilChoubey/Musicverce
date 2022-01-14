@@ -23,3 +23,10 @@
   margin-top: 0.35rem;
   width: 100%;
 }
+
+.nav-others-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+  margin-top: 1rem;
+}

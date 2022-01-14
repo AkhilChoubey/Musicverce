@@ -31,14 +31,7 @@ const Navbar = () => {
               />
             </form>
           </li>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              width: "20%",
-              marginTop: "1rem",
-            }}
-          >
+          <div className="nav-others-container">
             <li title="Favorites">
               <BsHeartFill style={{ fontSize: "1.3rem" }} />
             </li>
