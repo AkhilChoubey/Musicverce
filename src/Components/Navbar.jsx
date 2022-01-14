@@ -23,7 +23,7 @@ const Navbar = () => {
             color: "white",
           }}
         >
-          <li style={{ marginTop: "1rem" }}>
+          <li style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
             <GiMusicalNotes /> Musicverse
           </li>
           <li style={{ width: "40%" }}>
