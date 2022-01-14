@@ -3,8 +3,7 @@ import { GiMusicalNotes } from "react-icons/gi";
 const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
-    // console.log(e.search_input.value);
-    // console.log(e);
+
     console.log(e.target[0].value);
   };
 
