@@ -1,0 +1,11 @@
+.nav-root-container {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-between;
+  background-color: #030303;
+  margin: 0;
+  padding-bottom: 0.8rem;
+  height: 3.5rem;
+  color: white;
+}

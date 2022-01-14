@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import "./navbar.css";
 import { GiMusicalNotes } from "react-icons/gi";
-import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsHeartFill } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
-
+import DarkModeToggle from "react-dark-mode-toggle";
 const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
+
   const handleSearch = (e) => {
     e.preventDefault();
 
@@ -13,20 +16,10 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <ul
-          style={{
-            display: "flex",
-            textDecoration: "none",
-            listStyleType: "none",
-            justifyContent: "space-between",
-            backgroundColor: "#030303",
-            margin: "0",
-            paddingBottom: "0.8rem",
-            height: "3.5rem",
-            color: "white",
-          }}
-        >
-          <li style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
+        <ul className="nav-root-container">
+          <li
+            style={{ marginTop: "1rem", fontSize: "1.2rem", fontWeight: "600" }}
+          >
             <GiMusicalNotes /> Musicverse
           </li>
           <li style={{ width: "40%" }}>
@@ -58,13 +51,19 @@ const Navbar = () => {
               marginTop: "1rem",
             }}
           >
-            <li title="Loved Musics">
-              <BsFillSuitHeartFill />
+            <li title="Favorites">
+              <BsHeartFill style={{ fontSize: "1.3rem" }} />
             </li>
             <li title="Profile">
-              <BsFillPersonFill />
+              <BsFillPersonFill style={{ fontSize: "1.5rem" }} />
             </li>
-            <li>thmode</li>
+            <li>
+              <DarkModeToggle
+                onChange={setIsDarkMode}
+                checked={isDarkMode}
+                size={60}
+              />
+            </li>
           </div>
         </ul>
       </div>
