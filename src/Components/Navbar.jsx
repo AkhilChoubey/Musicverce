@@ -1,6 +1,8 @@
 import React from "react";
 import { GiMusicalNotes } from "react-icons/gi";
 import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
+
 const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
@@ -59,7 +61,9 @@ const Navbar = () => {
             <li title="Loved Musics">
               <BsFillSuitHeartFill />
             </li>
-            <li>Profile</li>
+            <li title="Profile">
+              <BsFillPersonFill />
+            </li>
             <li>thmode</li>
           </div>
         </ul>
