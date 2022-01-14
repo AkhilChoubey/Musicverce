@@ -10,10 +10,26 @@ const Navbar = () => {
             textDecoration: "none",
             listStyleType: "none",
             justifyContent: "space-between",
+            backgroundColor: "#030303",
           }}
         >
           <li>Musicverse</li>
-          <li>Search</li>
+          <li>
+            <input
+              style={{
+                backgroundColor: "#313131",
+                color: "white",
+                height: "100%",
+                fontWeight: "500",
+                fontSize: "20px",
+                fontSmoothing: "antialiased",
+                border: "none",
+                paddingLeft: "2%",
+                paddingRight: "2%",
+              }}
+              placeholder="Search"
+            />{" "}
+          </li>
           <div
             style={{
               display: "flex",
