@@ -1,5 +1,6 @@
 import React from "react";
 import { GiMusicalNotes } from "react-icons/gi";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
@@ -55,7 +56,9 @@ const Navbar = () => {
               marginTop: "1rem",
             }}
           >
-            <li>Love</li>
+            <li title="Loved Musics">
+              <BsFillSuitHeartFill />
+            </li>
             <li>Profile</li>
             <li>thmode</li>
           </div>
