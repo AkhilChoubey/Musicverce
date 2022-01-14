@@ -9,3 +9,17 @@
   height: 3.5rem;
   color: white;
 }
+
+.nav-search-input {
+  background-color: #313131;
+  color: white;
+  height: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  font-smooth: antialiased;
+  border: none;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 0.35rem;
+  width: 100%;
+}

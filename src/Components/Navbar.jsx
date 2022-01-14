@@ -26,19 +26,7 @@ const Navbar = () => {
             <form onSubmit={handleSearch} style={{ height: "100%" }}>
               <input
                 name="search_input"
-                style={{
-                  backgroundColor: "#313131",
-                  color: "white",
-                  height: "100%",
-                  fontWeight: "500",
-                  fontSize: "20px",
-                  fontSmoothing: "antialiased",
-                  border: "none",
-                  paddingLeft: "2%",
-                  paddingRight: "2%",
-                  marginTop: "0.35rem",
-                  width: "100%",
-                }}
+                className="nav-search-input"
                 placeholder="Search"
               />
             </form>
