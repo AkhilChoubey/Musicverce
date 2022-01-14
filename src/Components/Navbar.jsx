@@ -20,7 +20,7 @@ const Navbar = () => {
           <li className="nav-heading">
             <GiMusicalNotes /> Musicverse
           </li>
-          <li style={{ width: "40%" }}>
+          <li className="search-input-container">
             <form onSubmit={handleSearch} style={{ height: "100%" }}>
               <input
                 name="search_input"
