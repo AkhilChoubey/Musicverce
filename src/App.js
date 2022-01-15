@@ -12,7 +12,9 @@ const themes = {
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <ThemeSwitcherProvider defaultTheme="light" themeMap={themes}>
+        <Navbar />
+      </ThemeSwitcherProvider>
     </div>
   );
 }
