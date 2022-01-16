@@ -3,9 +3,19 @@ import "./navbar.css";
 import { GiMusicalNotes } from "react-icons/gi";
 import { BsHeartFill } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
+import { useThemeSwitcher } from "react-css-theme-switcher";
 import DarkModeToggle from "react-dark-mode-toggle";
+
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const { switcher, themes, currentTheme } = useThemeSwitcher();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((previous) => {
+      switcher({ theme: previous ? themes.light : themes.dark });
+      return !previous;
+    });
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -18,7 +28,7 @@ const Navbar = () => {
       <div>
         <ul className="nav-root-container">
           <li className="nav-heading">
-            <GiMusicalNotes /> Musicverse
+            <GiMusicalNotes className="icon-transition" /> Musicverse
           </li>
           <li className="search-input-container">
             <form onSubmit={handleSearch} style={{ height: "100%" }}>
@@ -31,15 +41,21 @@ const Navbar = () => {
           </li>
           <div className="nav-others-container">
             <li title="Favorites">
-              <BsHeartFill style={{ fontSize: "1.3rem" }} />
+              <BsHeartFill
+                className="icon-transition"
+                style={{ fontSize: "1.3rem" }}
+              />
             </li>
             <li title="Profile">
-              <BsFillPersonFill style={{ fontSize: "1.5rem" }} />
+              <BsFillPersonFill
+                className="icon-transition"
+                style={{ fontSize: "1.5rem" }}
+              />
             </li>
             <li>
               <DarkModeToggle
-                onChange={setIsDarkMode}
-                checked={isDarkMode}
+                onChange={toggleDarkMode}
+                checked={currentTheme === "dark" ? false : true}
                 size={60}
               />
             </li>
