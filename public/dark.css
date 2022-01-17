@@ -14,7 +14,18 @@
   color: white;
 }
 /* Home Component Styling */
+.home-container {
+  /* background-size: 1200px 400px; */
+  /* background-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
+  background-position: 0% 0%;
 
-.home-container h1 {
+  background-size: 100% 850px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./dark-background4.jpg);
+}
+
+.home-container > div {
   color: white;
 }
