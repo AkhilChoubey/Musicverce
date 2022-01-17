@@ -3,7 +3,7 @@ import "./navbar.css";
 import { GiMusicalNotes } from "react-icons/gi";
 import { BsHeartFill } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
-import { GrClose } from "react-icons/gr";
+import { IoMdClose } from "react-icons/io";
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import DarkModeToggle from "react-dark-mode-toggle";
 
@@ -11,6 +11,7 @@ const Navbar = () => {
   const { switcher, themes, currentTheme } = useThemeSwitcher();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [inputClear, setInputClear] = useState(false);
+  const [crossBtn, setCrossBtn] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode((previous) => {
@@ -26,7 +27,7 @@ const Navbar = () => {
   };
 
   const handleChange = () => {
-    setInputClear(true);
+    setCrossBtn(true);
   };
 
   return (
@@ -39,6 +40,14 @@ const Navbar = () => {
           <li className="search-input-container">
             <form
               onSubmit={handleSearch}
+              // onClick={(e) => {
+              //   if (inputClear) {
+              //     e.target.value = null;
+              //     console.log(e);
+              //     setInputClear(false);
+              //   }
+              //   // console.log(e.target.value);
+              // }}
               style={{ height: "100%", display: "flex" }}
             >
               <input
@@ -47,13 +56,23 @@ const Navbar = () => {
                 placeholder="Search"
                 onChange={handleChange}
               />
-              {inputClear && (
+              {crossBtn && (
                 <span
-                  onClick={() => {
-                    setInputClear(false);
+                  style={{ marginLeft: "1%" }}
+                  onClick={(e) => {
+                    setCrossBtn(false);
+                    setInputClear(true);
+                    console.log(e.target);
                   }}
                 >
-                  <GrClose />
+                  <IoMdClose
+                    // className="nav-heading"
+                    style={{
+                      fontWeight: 900,
+                      fontSize: "2rem",
+                      marginTop: "0.8rem",
+                    }}
+                  />
                 </span>
               )}
             </form>
