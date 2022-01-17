@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Rockville;
+  src: url(./Rockville_Solid.otf);
+}
+
+.home-container h1 {
+  font-family: Rockville;
+  font-size: 110px;
+  text-align: center;
+
+  /* src: url("./Rockville_Solid.otf"); */
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}

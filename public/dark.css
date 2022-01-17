@@ -13,3 +13,8 @@
 .nav-heading {
   color: white;
 }
+/* Home Component Styling */
+
+.home-container h1 {
+  color: white;
+}
