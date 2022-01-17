@@ -10,8 +10,9 @@ import DarkModeToggle from "react-dark-mode-toggle";
 const Navbar = () => {
   const { switcher, themes, currentTheme } = useThemeSwitcher();
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [inputClear, setInputClear] = useState(false);
+
   const [crossBtn, setCrossBtn] = useState(false);
+  const [search, setSearch] = useState("");
 
   const toggleDarkMode = () => {
     setIsDarkMode((previous) => {
@@ -26,8 +27,9 @@ const Navbar = () => {
     console.log(e.target[0].value);
   };
 
-  const handleChange = () => {
+  const handleChange = (e) => {
     setCrossBtn(true);
+    setSearch(e.target.value);
   };
 
   return (
@@ -53,16 +55,18 @@ const Navbar = () => {
               <input
                 name="search_input"
                 className="nav-search-input"
+                style={{ border: "none" }}
                 placeholder="Search"
+                value={search}
                 onChange={handleChange}
               />
               {crossBtn && (
                 <span
                   style={{ marginLeft: "1%" }}
-                  onClick={(e) => {
+                  onClick={() => {
                     setCrossBtn(false);
-                    setInputClear(true);
-                    console.log(e.target);
+                    // setInputClear(true);
+                    setSearch("");
                   }}
                 >
                   <IoMdClose
