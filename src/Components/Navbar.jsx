@@ -50,6 +50,11 @@ const Navbar = () => {
               //   }
               //   // console.log(e.target.value);
               // }}
+              onChange={(e) => {
+                if (e.target.value === "") {
+                  setCrossBtn(false);
+                }
+              }}
               style={{ height: "100%", display: "flex" }}
             >
               <input
@@ -74,7 +79,7 @@ const Navbar = () => {
                     style={{
                       fontWeight: 900,
                       fontSize: "2rem",
-                      marginTop: "0.8rem",
+                      marginTop: "0.75rem",
                     }}
                   />
                 </span>
