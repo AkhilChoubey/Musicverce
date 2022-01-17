@@ -3,12 +3,18 @@
   src: url(./Rockville_Solid.otf);
 }
 
+.home-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0% 0% /
+      cover fixed,
+    url(../Images/dark-background.jpg);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .home-container h1 {
   font-family: Rockville;
   font-size: 110px;
   text-align: center;
 
-  /* src: url("./Rockville_Solid.otf"); */
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
