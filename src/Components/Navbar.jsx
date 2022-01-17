@@ -3,12 +3,14 @@ import "./navbar.css";
 import { GiMusicalNotes } from "react-icons/gi";
 import { BsHeartFill } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
+import { GrClose } from "react-icons/gr";
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import DarkModeToggle from "react-dark-mode-toggle";
 
 const Navbar = () => {
   const { switcher, themes, currentTheme } = useThemeSwitcher();
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [inputClear, setInputClear] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode((previous) => {
@@ -23,6 +25,10 @@ const Navbar = () => {
     console.log(e.target[0].value);
   };
 
+  const handleChange = () => {
+    setInputClear(true);
+  };
+
   return (
     <>
       <div>
@@ -31,12 +37,25 @@ const Navbar = () => {
             <GiMusicalNotes className="icon-transition" /> Musicverse
           </li>
           <li className="search-input-container">
-            <form onSubmit={handleSearch} style={{ height: "100%" }}>
+            <form
+              onSubmit={handleSearch}
+              style={{ height: "100%", display: "flex" }}
+            >
               <input
                 name="search_input"
                 className="nav-search-input"
                 placeholder="Search"
+                onChange={handleChange}
               />
+              {inputClear && (
+                <span
+                  onClick={() => {
+                    setInputClear(false);
+                  }}
+                >
+                  <GrClose />
+                </span>
+              )}
             </form>
           </li>
           <div className="nav-others-container">
