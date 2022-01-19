@@ -5,13 +5,17 @@ const Home = () => {
     <>
       <div className="home-container">
         <div>
-          <span>MUSICVERSE</span>
-          <h1>Feel the heart beat</h1>
+          <div>
+            <span>MUSICVERSE</span>
+            <h1>Feel the heart beat</h1>
+            <btn>EXPLORE</btn>
+          </div>
           <img
             className="home-img1"
             src="https://preview.colorlib.com/theme/djoz/img/about/xabout.png.pagespeed.ic.UQ_7DY9Axc.webp"
             alt="Img Not Found"
           />
+
           {/* <p>
             Weclome to the universe of music , all the best for your musical
             journey , which is about to begin
