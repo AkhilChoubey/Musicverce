@@ -38,6 +38,9 @@
   letter-spacing: 7px;
 }
 
+.home-img1 {
+  display: none;
+}
 /* .home-container > div p {
   font-size: 15px;
 

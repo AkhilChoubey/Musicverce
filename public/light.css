@@ -9,3 +9,8 @@
   background-color: #cdcdc78f;
   color: #313131;
 }
+
+/* Home Componet Styling */
+.home-img1 {
+  display: block;
+}
