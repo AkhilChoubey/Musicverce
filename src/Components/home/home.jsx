@@ -8,7 +8,7 @@ const Home = () => {
           <div>
             <span>MUSICVERSE</span>
             <h1>Feel the heart beat</h1>
-            <btn>EXPLORE</btn>
+            <button className="button">EXPLORE</button>
           </div>
           <img
             className="home-img1"
