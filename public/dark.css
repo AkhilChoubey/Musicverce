@@ -33,3 +33,15 @@
 .home-container > div > div h1 span {
   color: #ffffff;
 }
+
+.button {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+.button:hover {
+  color: #000000;
+
+  background: #ffffff;
+}

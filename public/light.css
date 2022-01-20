@@ -44,3 +44,15 @@
 .home-img1 {
   display: block;
 }
+
+.button {
+  color: #fff;
+
+  background: linear-gradient(to right, #696b69 0%, #080909 100%);
+}
+
+.button:hover {
+  color: #fff;
+
+  background: linear-gradient(to right, #080909 0%, #696b69 100%);
+}
