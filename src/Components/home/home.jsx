@@ -8,11 +8,7 @@ const Home = () => {
           <div>
             <span>MUSICVERSE</span>
             <h1>
-              Feel the{" "}
-              <span style={{ color: "darkred", display: "contents" }}>
-                heart
-              </span>{" "}
-              beat
+              Feel the <span style={{ display: "contents" }}>heart</span> beat
             </h1>
             <button className="button">EXPLORE</button>
           </div>

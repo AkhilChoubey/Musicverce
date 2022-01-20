@@ -37,6 +37,10 @@
   display: none;
 }
 
+.home-container > div > div h1 span {
+  color: darkred;
+}
+
 .home-img1 {
   display: block;
 }

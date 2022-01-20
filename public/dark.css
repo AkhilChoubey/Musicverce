@@ -29,3 +29,7 @@
 .home-container > div {
   color: white;
 }
+
+.home-container > div > div h1 span {
+  color: #ffffff;
+}
